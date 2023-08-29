@@ -1,15 +1,24 @@
-import "./styles.css"
+import P from 'prop-types';
+import './styles.css';
 
-export const PostCard = ({ post }) => { //Comum fazer destructuring com algo que esteja dentro da props
-
+export const PostCard = ({ title, cover, body, id }) => {
+  //Comum fazer destructuring com algo que esteja dentro da props
 
   return (
     <div className="post">
-      <img src={post.cover} alt={post.title} />
+      <h1>{id}</h1>
+      <img src={cover} alt={title} />
       <div className="post-content">
-        <h1>{post.title}</h1>
-        <p>{post.body}</p>
+        <h2>{title}</h2>
+        <p>{body}</p>
       </div>
     </div>
   );
+};
+
+PostCard.propTypes = {
+  id: P.number.isRequired,
+  cover: P.string.isRequired,
+  title: P.string.isRequired,
+  body: P.string.isRequired,
 };

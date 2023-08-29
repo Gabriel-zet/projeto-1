@@ -18,3 +18,11 @@
 .post-content {
     padding: 30px;
 }
+
+h1 {
+    background-color: cornsilk;
+    font-family: fantasy;
+    text-shadow: 10cm;
+    text-align: center;
+    
+}
